@@ -1,0 +1,41 @@
+@keyframes slideIn {
+    from {
+        transform: translateY(5rem);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    border: 1px solid var(--light-gray);
+    max-width: 28rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    transform: translateY(5rem);
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+.dropdown::before {
+    background: #fff;
+    border-left: 1px solid #f2f4f9;
+    border-top: 1px solid #f2f4f9;
+    content: '';
+    height: 13px;
+    position: absolute;
+    right: 1.5%;
+    top: -8px;
+    transform: rotate(45deg);
+    width: 13px;
+    z-index: -1;
+}
+
+.dropdown.show {
+    display: block;
+}
