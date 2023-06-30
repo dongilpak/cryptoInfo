@@ -1,10 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Main from './pages/Main';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
+
+const Main = React.lazy(() => import('./pages/Main'));
 
 function App() {
     return (

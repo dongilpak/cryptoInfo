@@ -1,0 +1,135 @@
+#orderBook {
+    flex: 0 0 25%;
+    border: 1px solid var(--light-gray);
+    border-radius: 0.2rem;
+    margin: 0 0.75rem;
+}
+
+.orderBook__title {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+}
+
+.orderBook__title > span {
+    font-size: 1.4rem;
+    padding-left: 1.3rem;
+}
+
+.orderBook__info {
+    height: 45rem;
+    overflow-y: auto;
+}
+
+.orderBook__info::-webkit-scrollbar {
+    background: var(--light-gray);
+    height: 6px;
+    width: 3px;
+}
+
+.orderBook__info::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+.orderBook__info .orderBook__ask {
+    display: flex;
+}
+
+.ask__list {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 66.6%;
+}
+
+.ask__item {
+    display: flex;
+}
+
+.ask__item > div {
+    flex: 0 0 50%;
+    border: 0.5px solid white;
+    background-color: #d0def1;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.ask__item > div:hover {
+    background-color: #a3c0e6;
+}
+
+.orderBook__ask .ask__empty {
+    flex: 0 0 33.3%;
+}
+
+.orderBook__info .orderBook__bid {
+    display: flex;
+}
+
+.orderBook__bid .bid__empty {
+    flex: 0 0 33.3%;
+}
+
+.bid__list {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 66.6%;
+}
+
+.bid__item {
+    display: flex;
+}
+
+.bid__item > div {
+    flex: 0 0 50%;
+    border: 0.5px solid white;
+    background-color: #fbf1ef;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.bid__item > div:hover {
+    background-color: #e2bab4;
+}
+
+.ask__count,
+.bid__count {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+}
+
+.ask__count {
+    justify-content: flex-end;
+}
+
+.ask__price,
+.bid__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c0574b;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.orderBook__total {
+    display: flex;
+}
+
+.orderBook__total > div {
+    flex: 0 0 33.3%;
+    border: 1px solid var(--light-gray);
+    height: 4rem;
+    background-color: #f9fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.orderBook__total > .total__count {
+    font-weight: 600;
+}
