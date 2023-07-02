@@ -1,0 +1,90 @@
+#recentTrades {
+    border: 1px solid var(--light-gray);
+    border-radius: 0.2rem;
+    margin: 0.75rem;
+    height: 40%;
+}
+
+.recentTrades__title {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+}
+
+.recentTrades__title > span {
+    font-size: 1.4rem;
+    padding-left: 1.3rem;
+}
+
+.recentTrades__container {
+    height: calc(100% - 4rem);
+}
+
+.recentTrades__infoName {
+    height: 3rem;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #758696;
+    padding: 0 1.3rem;
+}
+
+.recentTrades__infoName > div {
+    flex: 1 1 33.3%;
+}
+
+.recentTrades__infoName .infoName__price {
+    text-align: center;
+}
+
+.recentTrades__infoName .infoName__amount {
+    text-align: end;
+}
+
+.recentTrades__items {
+    height: calc(100% - 7rem);
+    overflow-y: auto;
+}
+
+.recentTrades__items::-webkit-scrollbar {
+    background: var(--light-gray);
+    height: 6px;
+    width: 3px;
+}
+
+.recentTrades__items::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+.recentTrades__items > li {
+    padding: 0 1.3rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.recentTrades__items > li > div {
+    flex: 1 1 33.3%;
+}
+
+.recentTrades__items > li .recentTrades__price {
+    text-align: center;
+}
+
+.recentTrades__price .askColor {
+    color: var(--blue);
+}
+
+.recentTrades__price .bidColor {
+    color: var(--red);
+}
+
+.recentTrades__items > li .recentTrades__amount {
+    text-align: end;
+}

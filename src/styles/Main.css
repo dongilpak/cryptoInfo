@@ -1,5 +1,14 @@
 #main {
     width: 100%;
-    display: flex;
     margin: 1.5rem 0;
+}
+
+.upperContainer {
+    display: flex;
+    height: 89rem;
+}
+
+.trade__info {
+    flex: 0 0 25%;
+    height: 100%;
 }

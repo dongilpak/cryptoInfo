@@ -4,6 +4,7 @@ import '../styles/Market.css';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { searchMarket } from '../reducers/marketReducer';
 import { asyncGetOrderBook } from '../reducers/orderBookReducer';
+import { asyncGetRecentTrades } from '../reducers/recentTradesReducer';
 
 const Market = () => {
     const dispatch = useAppDispatch();
@@ -24,6 +25,7 @@ const Market = () => {
         ) as HTMLSpanElement;
 
         dispatch(asyncGetOrderBook(value.innerHTML));
+        dispatch(asyncGetRecentTrades(value.innerHTML));
     };
 
     return (

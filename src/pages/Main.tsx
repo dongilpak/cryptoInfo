@@ -5,6 +5,8 @@ import { useAppDispatch, useAppSelector } from '../hooks';
 import { asyncGetMarket } from '../reducers/marketReducer';
 import OrderBook from '../components/OrderBook';
 import { asyncGetOrderBook } from '../reducers/orderBookReducer';
+import RecentTrades from '../components/RecentTrades';
+import { asyncGetRecentTrades } from '../reducers/recentTradesReducer';
 
 const Main = () => {
     const dispatch = useAppDispatch();
@@ -17,13 +19,19 @@ const Main = () => {
     useEffect(() => {
         if (market.length > 0) {
             dispatch(asyncGetOrderBook(market[0].market));
+            dispatch(asyncGetRecentTrades(market[0].market));
         }
     }, [dispatch, market]);
 
     return (
         <div id='main'>
-            <Market />
-            <OrderBook />
+            <div className='upperContainer'>
+                <Market />
+                <div className='trade__info'>
+                    <OrderBook />
+                    <RecentTrades />
+                </div>
+            </div>
         </div>
     );
 };
