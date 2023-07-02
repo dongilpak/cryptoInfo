@@ -22,11 +22,11 @@ const RecentTrades = () => {
                     </div>
                 </div>
                 <ul className='recentTrades__items'>
-                    {recentData.map((data, index) => {
+                    {recentData.map(data => {
                         return (
                             <li
                                 className='recentTrades__item'
-                                key={data.sequential_id + index}
+                                key={data.sequential_id + data.trade_volume}
                             >
                                 <div className='recentTrades__time'>
                                     <span>{data.trade_time_utc}</span>

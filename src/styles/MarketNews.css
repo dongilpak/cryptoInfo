@@ -1,0 +1,61 @@
+#marketNews {
+    height: 100%;
+    border: 1px solid var(--light-gray);
+    border-radius: 0.2rem;
+    margin: 0.75rem;
+    flex: 0 0 25%;
+}
+
+.marketNews__title {
+    height: 4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: #f5f9fc;
+    display: flex;
+    align-items: center;
+    padding-left: 1.3rem;
+}
+
+.marketNews__list {
+    height: calc(100% - 4rem);
+    overflow-y: auto;
+}
+
+.marketNews__list::-webkit-scrollbar {
+    background: var(--light-gray);
+    height: 6px;
+    width: 3px;
+}
+
+.marketNews__list::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+.marketNews__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.3rem;
+    cursor: pointer;
+    height: 9rem;
+}
+
+.marketNews__item:hover {
+    background-color: var(--light-gray);
+}
+
+.marketNews__item h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.marketNews__item p {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.marketNews__item span {
+    font-size: 1.1rem;
+    font-weight: 400;
+}

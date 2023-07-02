@@ -7,6 +7,8 @@ import OrderBook from '../components/OrderBook';
 import { asyncGetOrderBook } from '../reducers/orderBookReducer';
 import RecentTrades from '../components/RecentTrades';
 import { asyncGetRecentTrades } from '../reducers/recentTradesReducer';
+import MarketNews from '../components/MarketNews';
+import OrderHistory from '../components/OrderHistory';
 
 const Main = () => {
     const dispatch = useAppDispatch();
@@ -31,6 +33,10 @@ const Main = () => {
                     <OrderBook />
                     <RecentTrades />
                 </div>
+            </div>
+            <div className='bottomContainer'>
+                <MarketNews />
+                <OrderHistory />
             </div>
         </div>
     );
